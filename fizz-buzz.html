@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <code id="panel"></code>
+    <script>
+        let a = Number(prompt("nhap so a: "));
+        let b = Number(prompt("nhap so b: "));
+        let fizz = 0
+        let buzz = 0
+        let fizzbuzz = 0
+        for (; a <= b; a++) {
+            document.getElementById("panel").innerText = a
+        }
+        if (a % 3 == 0) {
+            fizz = a
+            a = "fizz"
+        }
+        else if (a % 5 == 0) {
+            buzz = a
+            a = "buzz"
+        }
+        else if (a % 3 == 0 & a % 5 == 0) {
+            fizzbuzz = a
+            a = "fizzbuzz"
+            
+        }
+        document.getElementById("panel").innerText = a
+        
+    </script>
+</body>
+
+</html>
