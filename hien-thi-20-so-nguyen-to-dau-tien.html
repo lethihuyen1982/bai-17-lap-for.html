@@ -9,16 +9,30 @@
 </head>
 
 <body>
-    
-    <script>
-            let num = Number(prompt("so luong so nguyen to can in:"))
-            for (let count = 1; count < num; count++) {
-                document.write(count + " ")
-                let n = 2
-                
 
+    <input id="num" type="number" oninput="timSNT()">
+    <pre id="panel"></pre>
+    <script>
+        function timSNT() {
+            document.getElementById("panel").innerText = ""
+            let num = Number(document.getElementById("num").value)
+            let foundPrimeNum = 0
+            let i = 2
+            while (foundPrimeNum < num) {
+                let isPrime = true
+                for (let j = 2; j <= i / 2; j++) {
+                    if (i % j == 0) {
+                        isPrime = false
+                        break
+                    }
                 }
-            
+                if (isPrime == true) {
+                    document.getElementById("panel").innerText += i + " "
+                    foundPrimeNum++
+                }
+                i++
+            }
+        }
     </script>
 </body>
 
